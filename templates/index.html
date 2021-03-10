@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <p>導航欄</p>
+        <form action="search" method="get">
+            <label>
+                <input type="text" name="key" placeholder="搜尋">
+                <input type="submit" value="搜尋" />
+            </label>
+        </form>
+    </div>
+    <div class="content">
+        <div class="news info-box" id="news">
+            <p>新聞</p>
+        </div>
+        <div class="article-info info-box">
+            <p>條目資訊</p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function get_news(data) {
+            for (let i = 0; i < data.length; i++) {
+                const news = document.createElement("H2");
+                news.innerHTML = data[i]
+                document.getElementById("news").append(news)
+            }
+        }
+        get_news({{data}})
+    </script>
+</body>
+</html>

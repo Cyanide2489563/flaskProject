@@ -1,0 +1,42 @@
+.html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    border:none;
+    background-color: #ededed;
+}
+
+.nav {
+    height: 5%;
+    width: auto;
+    background-color: #4f5050;
+}
+
+.content {
+    margin-left: 4%;
+    margin-right: 4%;
+
+    border-color: #3dd5f3;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 5px;
+
+    background-color: #0a53be;
+    height: 95%;
+    overflow: auto;
+}
+
+.info-box {
+    margin: 10px;
+}
+
+.news {
+    width: 60%;
+    float: left;
+}
+
+.article-info {
+    background-color: #000000;
+    width: 25%;
+    float: right;
+}
