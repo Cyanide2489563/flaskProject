@@ -1,5 +1,7 @@
+import json
+
 from GoogleNews import GoogleNews
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
@@ -18,9 +20,9 @@ def search():
 
     newses = list()
     for news in result:
-        print(news["title"])
-        newses.append(news["title"])
-    return render_template("index.html", data=newses)
+        newses.append({"title": news["title"], "link": news["link"]})
+
+    return render_template("index.html", data=json.dumps(newses))
 
 
 if __name__ == '__main__':

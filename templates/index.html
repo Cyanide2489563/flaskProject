@@ -29,11 +29,11 @@
         function get_news(data) {
             for (let i = 0; i < data.length; i++) {
                 const news = document.createElement("H2");
-                news.innerHTML = data[i]
-                document.getElementById("news").append(news)
+                news.innerHTML = "<a href='" + data[i].link + "'>" + data[i].title + "</a>";
+                document.getElementById("news").append(news);
             }
         }
-        get_news({{data}})
+        get_news({{data | safe}})
     </script>
 </body>
 </html>
